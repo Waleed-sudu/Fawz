@@ -108,7 +108,7 @@
   <header class="header">
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="Fawz Paints & Decor">
-        <img src="./assets/fawz-logo.jpg" alt="شعار Fawz Paints & Decor" width="60" height="60" loading="eager" />
+        <img src="fawz-logo.jpg" alt="شعار Fawz Paints & Decor" width="60" height="60" loading="eager" />
         <div class="brand-copy">
           <strong>Fawz</strong>
           <span>Paints & Decor</span>
@@ -144,7 +144,7 @@
         </div>
         <div class="hero-visual">
           <div class="hero-frame">
-            <img src="./assets/fawz-hero.jpg" alt="فراشة Fawz بألوان الدهان داخل أستوديو ديكور" width="900" height="700" loading="eager" />
+            <img src="fawz-hero.jpg" alt="فراشة Fawz بألوان الدهان داخل أستوديو ديكور" width="900" height="700" loading="eager" />
           </div>
           <div class="hero-tag"><span></span> مشهد مستوحى من عالم الدهان وديكور الجدران.</div>
         </div>
@@ -270,12 +270,12 @@
             <h2 class="section-title">تواصل مع Fawz</h2>
             <p class="section-intro" style="margin-bottom:.75rem">العنوان المعتمد: حمص - شارع البرازيل - مقابل برج هنادي.</p>
             <div class="contact-meta">
-              <span class="pill">الهاتف / واتساب: 0935861820</span>
+              <span class="pill">الهاتف / واتساب: 0995599603</span>
               <span class="pill">حمص - شارع البرازيل</span>
               <span class="pill">مقابل برج هنادي مباشرة</span>
             </div>
           </div>
-          <a class="btn btn-primary" href="https://wa.me/963935861820" target="_blank" rel="noopener noreferrer">راسلنا على واتساب</a>
+          <a class="btn btn-primary" href="https://wa.me/963995599603" target="_blank" rel="noopener noreferrer">راسلنا على واتساب</a>
         </div>
       </div>
     </section>
@@ -296,18 +296,6 @@
       const sun='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
       root.setAttribute('data-theme',theme);btn.innerHTML=theme==='dark'?sun:moon;
       btn.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);btn.innerHTML=theme==='dark'?sun:moon;});
-    })();
-    function previewImage(event,id){
-      const file=event.target.files && event.target.files[0];
-      const img=document.getElementById(id);
-      const label=document.getElementById(id+'-label');
-      if(!file||!img||!label)return;
-      const reader=new FileReader();
-      reader.onload=function(e){
-        img.src=e.target.result;
-        img.hidden=false;
-        label.textContent=file.name;
-      };
       reader.readAsDataURL(file);
     }
   </script>
