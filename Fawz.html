@@ -5,106 +5,654 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fawz Paints & Decor</title>
   <meta name="description" content="موقع فاخر ومتكامل لمعرض Fawz Paints & Decor في حمص - شارع البرازيل، يقدم حلول دهان وبديل رخام وشيبورد بتصميم بمستوى الماركات العالمية." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <style>
-    :root,[data-theme="light"]{
-      --text-xs:clamp(.75rem,.7rem + .25vw,.875rem);
-      --text-sm:clamp(.875rem,.8rem + .35vw,1rem);
-      --text-base:clamp(1rem,.95rem + .25vw,1.125rem);
-      --text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);
-      --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
-      --text-2xl:clamp(2.3rem,1.2rem + 3vw,4.4rem);
-      --space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;
-      --color-bg:#f4f2ee;--color-surface:#faf8f5;--color-surface-2:#ffffff;--color-surface-soft:#f7f4f0;--color-surface-offset:#ede6de;
-      --color-border:#d7d1c9;--color-divider:#dcd5cd;
-      --color-navy:#141b3b;--color-plum:#5a2c82;--color-amber:#f49b3f;--color-teal:#86d4dc;
-      --color-text:#141525;--color-text-muted:#5e647d;--color-text-faint:#979bb0;--color-text-inverse:#fbfaf6;
-      --color-primary:#141b3b;--color-primary-soft:#242b4a;--color-primary-hover:#0f1530;
-      --radius-sm:.6rem;--radius-md:.9rem;--radius-lg:1.3rem;--radius-xl:1.9rem;--radius-pill:999px;
-      --shadow-sm:0 2px 12px rgba(19,24,44,.08);--shadow-md:0 18px 55px rgba(19,24,44,.14);
-      --content:1180px;--font-body:'Cairo',sans-serif;--font-display:'Cormorant Garamond',serif;
+    :root,
+    [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.3rem, 1.2rem + 3vw, 4.4rem);
+
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+
+      --color-bg: #f4f2ee;
+      --color-surface: #faf8f5;
+      --color-surface-2: #ffffff;
+      --color-surface-soft: #f7f4f0;
+      --color-surface-offset: #ede6de;
+
+      --color-border: #d7d1c9;
+      --color-divider: #dcd5cd;
+
+      --color-navy: #141b3b;
+      --color-plum: #5a2c82;
+      --color-amber: #f49b3f;
+      --color-teal: #86d4dc;
+
+      --color-text: #141525;
+      --color-text-muted: #5e647d;
+      --color-text-faint: #979bb0;
+      --color-text-inverse: #fbfaf6;
+
+      --color-primary: #141b3b;
+      --color-primary-soft: #242b4a;
+      --color-primary-hover: #0f1530;
+
+      --radius-sm: 0.6rem;
+      --radius-md: 0.9rem;
+      --radius-lg: 1.3rem;
+      --radius-xl: 1.9rem;
+      --radius-pill: 999px;
+
+      --shadow-sm: 0 2px 12px rgba(19, 24, 44, 0.08);
+      --shadow-md: 0 18px 55px rgba(19, 24, 44, 0.14);
+
+      --content: 1180px;
+      --font-body: "Cairo", sans-serif;
+      --font-display: "Cormorant Garamond", serif;
     }
-    [data-theme="dark"]{
-      --color-bg:#10121b;--color-surface:#151927;--color-surface-2:#1a2030;--color-surface-soft:#181d2a;--color-surface-offset:#21283a;
-      --color-border:#31374a;--color-divider:#2a3040;
-      --color-text:#f2efe7;--color-text-muted:#c2beb3;--color-text-faint:#8c90a3;--color-text-inverse:#10121b;
-      --color-primary:#8da2ff;--color-primary-soft:#6c7fdd;--color-primary-hover:#b8c5ff;
-      --shadow-sm:0 2px 14px rgba(0,0,0,.24);--shadow-md:0 22px 60px rgba(0,0,0,.46);
+
+    [data-theme="dark"] {
+      --color-bg: #10121b;
+      --color-surface: #151927;
+      --color-surface-2: #1a2030;
+      --color-surface-soft: #181d2a;
+      --color-surface-offset: #21283a;
+
+      --color-border: #31374a;
+      --color-divider: #2a3040;
+
+      --color-text: #f2efe7;
+      --color-text-muted: #c2beb3;
+      --color-text-faint: #8c90a3;
+      --color-text-inverse: #10121b;
+
+      --color-primary: #8da2ff;
+      --color-primary-soft: #6c7fdd;
+      --color-primary-hover: #b8c5ff;
+
+      --shadow-sm: 0 2px 14px rgba(0, 0, 0, 0.24);
+      --shadow-md: 0 22px 60px rgba(0, 0, 0, 0.46);
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-    body{font-family:var(--font-body);background:radial-gradient(circle at top,var(--color-surface-soft),var(--color-bg));color:var(--color-text);font-size:var(--text-base);line-height:1.8}
-    img{display:block;max-width:100%;height:auto}
-    a{text-decoration:none;color:inherit}
-    button{border:none;background:none;font:inherit;cursor:pointer}
-    .container{width:min(calc(100% - 2rem),var(--content));margin-inline:auto}
-    .skip-link{position:absolute;top:-40px;right:1rem;background:var(--color-primary);color:var(--color-text-inverse);padding:.8rem 1rem;border-radius:var(--radius-pill);z-index:999}.skip-link:focus{top:1rem}
-    .header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--color-bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--color-divider) 70%,transparent)}
-    .header-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:1rem;min-width:0}
-    .brand img{width:60px;height:60px;border-radius:20px;object-fit:cover;box-shadow:var(--shadow-sm);background:var(--color-surface-2)}
-    .brand-copy{display:flex;flex-direction:column}
-    .brand-copy strong{font-family:var(--font-display);font-size:2.1rem;line-height:1;color:var(--color-primary)}
-    .brand-copy span{font-size:var(--text-sm);color:var(--color-text-muted)}
-    .nav{display:flex;gap:.45rem;flex-wrap:wrap}
-    .nav a{padding:.6rem .95rem;border-radius:var(--radius-pill);font-size:var(--text-sm);color:var(--color-text-muted)}
-    .nav a:hover,.nav a:focus-visible{background:var(--color-surface-2);color:var(--color-text)}
-    .theme-toggle{width:46px;height:46px;border-radius:var(--radius-pill);background:var(--color-surface-2);box-shadow:var(--shadow-sm);color:var(--color-text)}
-    .hero{padding:clamp(3.4rem,7vw,6.8rem) 0}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
-    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1rem;border-radius:var(--radius-pill);background:color-mix(in srgb,var(--color-surface-2) 70%,var(--color-surface-soft));border:1px solid color-mix(in srgb,var(--color-navy) 18%,transparent);color:var(--color-primary);font-size:var(--text-sm);margin-bottom:1rem}
-    .eyebrow span{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--color-amber),var(--color-plum))}
-    h1{font-family:var(--font-display);font-size:var(--text-2xl);line-height:1.05;letter-spacing:.01em;margin-bottom:1rem}
-    .lead{max-width:60ch;color:var(--color-text-muted);margin-bottom:1.5rem}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:1.1rem}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.95rem 1.35rem;border-radius:var(--radius-pill);font-weight:700;transition:all .18s ease}
-    .btn-primary{background:linear-gradient(135deg,var(--color-primary-soft),var(--color-primary));color:var(--color-text-inverse);box-shadow:0 14px 30px rgba(9,12,32,.35)}
-    .btn-primary:hover{background:linear-gradient(135deg,var(--color-primary),var(--color-primary-hover));transform:translateY(-1px)}
-    .btn-ghost{background:color-mix(in srgb,var(--color-surface-2) 85%,transparent);border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent);color:var(--color-text-muted)}
-    .btn-ghost:hover{background:var(--color-surface-2);color:var(--color-text)}
-    .hero-meta{display:flex;flex-wrap:wrap;gap:.8rem}
-    .pill{padding:.55rem .95rem;border-radius:var(--radius-pill);background:var(--color-surface-2);border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent);color:var(--color-text-muted);font-size:var(--text-sm)}
-    .hero-visual{position:relative}
-    .hero-frame{background:radial-gradient(circle at top,var(--color-surface-2),var(--color-surface-soft));border-radius:2.4rem;padding:1.3rem;border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent);box-shadow:var(--shadow-md)}
-    .hero-frame img{border-radius:2rem;width:100%;height:430px;object-fit:cover}
-    .hero-tag{position:absolute;left:1.6rem;bottom:1.6rem;padding:.65rem 1rem;border-radius:1.2rem;background:color-mix(in srgb,var(--color-bg) 92%,transparent);backdrop-filter:blur(12px);font-size:var(--text-sm);color:var(--color-text-muted);display:flex;align-items:center;gap:.6rem}
-    .hero-tag span{width:9px;height:9px;border-radius:999px;background:linear-gradient(135deg,var(--color-amber),var(--color-plum))}
-    .section{padding:clamp(3.1rem,6vw,5.2rem) 0}
-    .section-header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.2rem;margin-bottom:1.6rem}
-    .kicker{font-size:var(--text-xs);letter-spacing:.18em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:.5rem}
-    .section-title{font-family:var(--font-display);font-size:var(--text-xl);margin-bottom:.4rem}
-    .section-intro{max-width:65ch;color:var(--color-text-muted)}
-    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.6rem}
-    .panel{background:var(--color-surface);border-radius:var(--radius-xl);padding:1.7rem;border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent);box-shadow:var(--shadow-sm)}
-    .panel ul{list-style:none;display:grid;gap:.75rem;margin-top:1rem}
-    .panel li{padding:.85rem 1rem;border-radius:1.1rem;background:var(--color-surface-2);color:var(--color-text-muted);font-size:var(--text-sm)}
-    .badge-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.1rem}
-    .badge{padding:.45rem .75rem;border-radius:var(--radius-pill);background:color-mix(in srgb,var(--color-amber) 10%,var(--color-surface-2));color:var(--color-primary);font-size:var(--text-xs)}
-    .materials-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-    .material-card{background:var(--color-surface);border-radius:var(--radius-lg);padding:1.3rem;border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent);box-shadow:var(--shadow-sm)}
-    .material-icon{width:52px;height:52px;border-radius:1.2rem;display:grid;place-items:center;background:conic-gradient(from 200deg,var(--color-amber),var(--color-plum),var(--color-teal),var(--color-amber));color:#fff}
-    .material-card h3{font-size:var(--text-lg);margin:.9rem 0 .45rem}
-    .material-card p{font-size:var(--text-sm);color:var(--color-text-muted)}
-    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .step{background:var(--color-surface);padding:1.4rem;border-radius:var(--radius-lg);border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent)}
-    .step-num{width:32px;height:32px;border-radius:999px;background:color-mix(in srgb,var(--color-primary) 20%,var(--color-bg));display:grid;place-items:center;font-size:var(--text-sm);color:var(--color-primary);margin-bottom:.7rem}
-    .gallery-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
-    .upload-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .upload-slot{border:1.5px dashed color-mix(in srgb,var(--color-primary) 26%,transparent);background:var(--color-surface-2);border-radius:1.2rem;padding:1rem;min-height:220px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:var(--color-text-muted)}
-    .upload-slot input{margin-top:.9rem;width:100%}
-    .upload-slot small{display:block;margin-top:.6rem;color:var(--color-text-faint)}
-    .upload-slot img{margin-top:1rem;border-radius:1rem;width:100%;height:180px;object-fit:cover}
-    .contact-card{background:var(--color-surface);padding:1.7rem;border-radius:var(--radius-xl);border:1px solid color-mix(in srgb,var(--color-border) 80%,transparent);box-shadow:var(--shadow-sm);display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:center}
-    .contact-meta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
-    .footer{padding:2.2rem 0;border-top:1px solid color-mix(in srgb,var(--color-divider) 80%,transparent);color:var(--color-text-muted);font-size:var(--text-sm)}
-    @media(max-width:980px){.hero-grid,.about-grid,.materials-grid,.gallery-wrap,.process-grid,.contact-card{grid-template-columns:1fr 1fr}.nav{display:none}}
-    @media(max-width:720px){.hero-grid,.about-grid,.gallery-wrap,.materials-grid,.process-grid,.upload-grid,.contact-card{grid-template-columns:1fr}.hero-frame img{height:360px}.brand-copy strong{font-size:1.8rem}.hero-actions .btn{width:100%}.materials-grid{gap:.9rem}}
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: radial-gradient(circle at top, var(--color-surface-soft), var(--color-bg));
+      color: var(--color-text);
+      font-size: var(--text-base);
+      line-height: 1.8;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      border: none;
+      background: none;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      right: 1rem;
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: 0.8rem 1rem;
+      border-radius: var(--radius-pill);
+      z-index: 999;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid color-mix(in srgb, var(--color-divider) 70%, transparent);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 60px;
+      height: 60px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+      background: var(--color-surface-2);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-copy strong {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      line-height: 1;
+      color: var(--color-primary);
+    }
+
+    .brand-copy span {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .nav {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      padding: 0.6rem 0.95rem;
+      border-radius: var(--radius-pill);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .nav a:hover,
+    .nav a:focus-visible {
+      background: var(--color-surface-2);
+      color: var(--color-text);
+    }
+
+    .theme-toggle {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-pill);
+      background: var(--color-surface-2);
+      box-shadow: var(--shadow-sm);
+      color: var(--color-text);
+    }
+
+    .hero {
+      padding: clamp(3.4rem, 7vw, 6.8rem) 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1rem;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--color-surface-2) 70%, var(--color-surface-soft));
+      border: 1px solid color-mix(in srgb, var(--color-navy) 18%, transparent);
+      color: var(--color-primary);
+      font-size: var(--text-sm);
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--color-amber), var(--color-plum));
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      margin-bottom: 1rem;
+    }
+
+    .lead {
+      max-width: 60ch;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.95rem 1.35rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      transition: all 0.18s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary));
+      color: var(--color-text-inverse);
+      box-shadow: 0 14px 30px rgba(9, 12, 32, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: color-mix(in srgb, var(--color-surface-2) 85%, transparent);
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+      color: var(--color-text-muted);
+    }
+
+    .btn-ghost:hover {
+      background: var(--color-surface-2);
+      color: var(--color-text);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .pill {
+      padding: 0.55rem 0.95rem;
+      border-radius: var(--radius-pill);
+      background: var(--color-surface-2);
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-frame {
+      background: radial-gradient(circle at top, var(--color-surface-2), var(--color-surface-soft));
+      border-radius: 2.4rem;
+      padding: 1.3rem;
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-frame img {
+      border-radius: 2rem;
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+    }
+
+    .hero-tag {
+      position: absolute;
+      left: 1.6rem;
+      bottom: 1.6rem;
+      padding: 0.65rem 1rem;
+      border-radius: 1.2rem;
+      background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+      backdrop-filter: blur(12px);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .hero-tag span {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--color-amber), var(--color-plum));
+    }
+
+    .section {
+      padding: clamp(3.1rem, 6vw, 5.2rem) 0;
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.2rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .kicker {
+      font-size: var(--text-xs);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-text-faint);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-intro {
+      max-width: 65ch;
+      color: var(--color-text-muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.6rem;
+    }
+
+    .panel {
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      padding: 1.7rem;
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel ul {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .panel li {
+      padding: 0.85rem 1rem;
+      border-radius: 1.1rem;
+      background: var(--color-surface-2);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.1rem;
+    }
+
+    .badge {
+      padding: 0.45rem 0.75rem;
+      border-radius: var(--radius-pill);
+      background: color-mix(in srgb, var(--color-amber) 10%, var(--color-surface-2));
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+    }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .material-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: 1.3rem;
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .material-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 1.2rem;
+      display: grid;
+      place-items: center;
+      background: conic-gradient(
+        from 200deg,
+        var(--color-amber),
+        var(--color-plum),
+        var(--color-teal),
+        var(--color-amber)
+      );
+      color: #fff;
+    }
+
+    .material-card h3 {
+      font-size: var(--text-lg);
+      margin: 0.9rem 0 0.45rem;
+    }
+
+    .material-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .step {
+      background: var(--color-surface);
+      padding: 1.4rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--color-primary) 20%, var(--color-bg));
+      display: grid;
+      place-items: center;
+      font-size: var(--text-sm);
+      color: var(--color-primary);
+      margin-bottom: 0.7rem;
+    }
+
+    .gallery-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+    }
+
+    .upload-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .upload-slot {
+      border-radius: 1.2rem;
+      padding: 1rem;
+      min-height: 220px;
+      background: var(--color-surface-2);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 18%, transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      text-align: right;
+      color: var(--color-text-muted);
+      gap: 0.6rem;
+    }
+
+    .upload-slot strong {
+      font-size: var(--text-sm);
+      color: var(--color-text);
+    }
+
+    .upload-slot img {
+      border-radius: 1rem;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .contact-card {
+      background: var(--color-surface);
+      padding: 1.7rem;
+      border-radius: var(--radius-xl);
+      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .contact-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .contact-pill {
+      min-width: 210px;
+      padding-inline: 1.6rem;
+      height: 56px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: var(--text-sm);
+    }
+
+    .footer {
+      padding: 2.2rem 0;
+      border-top: 1px solid color-mix(in srgb, var(--color-divider) 80%, transparent);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .materials-grid,
+      .gallery-wrap,
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-card {
+        flex-direction: row;
+      }
+
+      .nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-grid,
+      .about-grid,
+      .gallery-wrap,
+      .materials-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .upload-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-frame img {
+        height: 360px;
+      }
+
+      .brand-copy strong {
+        font-size: 1.8rem;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .materials-grid {
+        gap: 0.9rem;
+      }
+
+      .contact-card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .contact-pill {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#content">تجاوز إلى المحتوى</a>
+
   <header class="header">
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="Fawz Paints & Decor">
@@ -114,6 +662,7 @@
           <span>Paints & Decor</span>
         </div>
       </a>
+
       <nav class="nav" aria-label="التنقل الرئيسي">
         <a href="#about">عن فوز</a>
         <a href="#materials">الخامات</a>
@@ -121,168 +670,340 @@
         <a href="#gallery">المعرض</a>
         <a href="#contact">التواصل</a>
       </nav>
+
       <button class="theme-toggle" data-theme-toggle aria-label="تبديل الوضع الليلي">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+          />
+        </svg>
       </button>
     </div>
   </header>
 
   <main id="content">
+    <!-- HERO -->
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow"><span></span> Fawz Paints & Decor • Premium House Finishing</div>
-          <h1>هوية فاخرة لعلامة دهان وديكور تحاكي أسلوب الماركات العالمية وتُظهر خبرة تصميم حقيقية.</h1>
+          <div class="eyebrow">
+            <span></span>
+            Fawz Paints & Decor • Premium House Finishing
+          </div>
+          <h1>
+            هوية فاخرة لعلامة دهان وديكور تحاكي أسلوب الماركات العالمية وتُظهر خبرة تصميم حقيقية.
+          </h1>
+        
           <div class="hero-actions">
             <a class="btn btn-primary" href="#gallery">استعراض الأعمال</a>
             <a class="btn btn-ghost" href="#materials">اكتشف الخامات</a>
           </div>
           <div class="hero-meta">
             <span class="pill">حمص - شارع البرازيل - مقابل برج هنادي</span>
-            <span class="pill">واتساب: 0935861820</span>
+            <span class="pill">واتساب: 0995599603</span>
           </div>
         </div>
+
         <div class="hero-visual">
           <div class="hero-frame">
-            <img src="fawz-hero.jpg" alt="فراشة Fawz بألوان الدهان داخل أستوديو ديكور" width="900" height="700" loading="eager" />
+            <img
+              src="fawz-hero.jpg"
+              alt="فراشة Fawz بألوان الدهان داخل أستوديو ديكور"
+              width="900"
+              height="700"
+              loading="eager"
+            />
           </div>
-          <div class="hero-tag"><span></span> مشهد مستوحى من عالم الدهان وديكور الجدران.</div>
+          <div class="hero-tag">
+            <span></span>
+            مشهد مستوحى من عالم الدهان وديكور الجدران.
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container about-grid">
         <article class="panel">
           <div class="kicker">Brand Story</div>
           <h2 class="section-title">عن Fawz</h2>
-          <p class="section-intro">Fawz Paints & Decor أكثر من معرض دهانات؛ هي علامة تهتم بتجربة البيت كاملًا، من أول لمسة لون على الجدار إلى آخر تفصيل في بديل الرخام والشيبورد. تم تصميم هذا الموقع ليكون واجهة رقمية بنفس مستوى حضور المعرض على أرض الواقع.</p>
-         
+          <p class="section-intro">
+            Fawz Paints & Decor أكثر من معرض دهانات؛ هي علامة تهتم بتجربة البيت كاملًا، من أول لمسة
+            لون على الجدار إلى آخر تفصيل في بديل الرخام والشيبورد، مع تركيز على تنفيذ نظيف يليق
+            بالهوية.
+          </p>
           <div class="badge-row">
             <span class="badge">بديل رخام</span>
             <span class="badge">شيبورد وديكور جدران</span>
             <span class="badge">دهانات داخلية وخارجية</span>
-        
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="kicker">Design Language</div>
+          <h2 class="section-title">أسلوب تصميم بخبرة طويلة</h2>
+          <p class="section-intro">
+          
+          </p>
+          <ul>
+          
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- MATERIALS -->
     <section class="section" id="materials">
       <div class="container">
         <div class="section-header">
           <div>
             <div class="kicker">Core Materials</div>
             <h2 class="section-title">الخامات الرئيسية</h2>
+            <p class="section-intro">
+              
+            </p>
+          </div>
         </div>
+
         <div class="materials-grid">
           <article class="material-card">
             <div class="material-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/></svg>
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path d="M3 21h18" />
+                <path d="M5 21V8l7-5 7 5v13" />
+              </svg>
             </div>
             <h3>بديل الرخام</h3>
-            <p>ألواح وPanels تعطي إحساس الرخام الطبيعي لكن بوزن أخف، تركيب أسهل، وسيناريوهات ألوان متعددة تناسب الصالونات، المداخل، والجدران البارزة.</p>
+            <p>
+              ألواح وPanels تعطي إحساس الرخام الطبيعي لكن بوزن أخف، تركيب أسهل، وسيناريوهات ألوان
+              متعددة تناسب الصالونات، المداخل، والجدران البارزة.
+            </p>
           </article>
+
           <article class="material-card">
             <div class="material-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/></svg>
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <rect x="4" y="5" width="16" height="14" rx="2" />
+                <path d="M4 10h16" />
+              </svg>
             </div>
             <h3>الشيبورد وديكور الجدران</h3>
-            <p>حلول جاهزة لتقسيم الجدران، خلق مستويات وظلال، ومزج الإضاءة مع التكسية، مع قابلية عرض أشكال مختلفة مباشرة في قسم المعرض.</p>
+            <p>
+              حلول جاهزة لتقسيم الجدران، خلق مستويات وظلال، ومزج الإضاءة مع التكسية، مع قابلية عرض
+              أشكال مختلفة مباشرة في قسم المعرض.
+            </p>
           </article>
+
           <article class="material-card">
             <div class="material-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4l6 6-9 9H5v-6l9-9z"/></svg>
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path d="M14 4l6 6-9 9H5v-6l9-9z" />
+              </svg>
             </div>
             <h3>الدهانات</h3>
+            <p>
+              درجات ألوان داخلية وخارجية مدروسة،
+            </p>
           </article>
+
           <article class="material-card">
             <div class="material-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20"/><path d="M2 12h20"/></svg>
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path d="M12 2v20" />
+                <path d="M2 12h20" />
+              </svg>
             </div>
             <h3>حلول ديكور متكاملة</h3>
-            <p>من اختيار اللون إلى تنفيذ المشروع، يمكن استخدام هذه المساحة لشرح الباقات أو العروض الخاصة بمشاريع الشقق والفلل.</p>
+            <p>
+              
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section class="section" id="process">
       <div class="container">
         <div class="section-header">
           <div>
             <div class="kicker">How We Work</div>
             <h2 class="section-title">طريقة عمل Fawz</h2>
-      
+            <p class="section-intro">
+              فريق التنفيذ يهتم بأدق التفاصيل .
+            </p>
           </div>
         </div>
+
         <div class="process-grid">
           <article class="step">
             <div class="step-num">1</div>
-            <h3 class="section-title" style="font-size:var(--text-lg);margin-bottom:.4rem">جلسة استكشاف</h3>
-            <p class="section-intro" style="margin:0">نستمع فيها لأسلوب الحياة، الألوان المفضلة، وطبيعة المساحة، لنقترح حلول دهان وبديل رخام وشيبورد تناسب شخصية البيت.</p>
+            <h3 class="section-title" style="font-size: var(--text-lg); margin-bottom: 0.4rem">
+              جلسة استكشاف
+            </h3>
+            <p class="section-intro" style="margin: 0">
+              نستمع فيها لأسلوب الحياة، الألوان المفضلة، وطبيعة المساحة، لنقترح حلول دهان وبديل رخام
+              وشيبورد تناسب شخصية البيت.
+            </p>
           </article>
+
           <article class="step">
             <div class="step-num">2</div>
-            <h3 class="section-title" style="font-size:var(--text-lg);margin-bottom:.4rem">اختيار الخامات</h3>
-            <p class="section-intro" style="margin:0">نحدد معًا الخامات والألوان، .</p>
+            <h3 class="section-title" style="font-size: var(--text-lg); margin-bottom: 0.4rem">
+              اختيار الخامات
+            </h3>
+            <p class="section-intro" style="margin: 0">
+              
+            </p>
           </article>
+
           <article class="step">
             <div class="step-num">3</div>
-            <h3 class="section-title" style="font-size:var(--text-lg);margin-bottom:.4rem">تنفيذ ومتابعة</h3>
-            <p class="section-intro" style="margin:0">فريق التنفيذ يهتم بأدق التفاصيل .</p>
+            <h3 class="section-title" style="font-size: var(--text-lg); margin-bottom: 0.4rem">
+              تنفيذ ومتابعة
+            </h3>
+            <p class="section-intro" style="margin: 0">
+              فريق التنفيذ يهتم بأدق التفاصيل، بينما نوثق العمل بصور يمكن إضافتها مباشرة في قسم
+              المعرض لتكوّن تاريخًا بصريًا للعلامة.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- GALLERY -->
     <section class="section" id="gallery">
       <div class="container gallery-wrap">
         <article class="panel">
           <div class="kicker">Visual Gallery</div>
           <h2 class="section-title">معرض بديل الرخام والشيبورد</h2>
-         <div class="upload-grid">
-  <div class="upload-slot">
-    <strong>بديل رخام 1</strong>
-    <img src="marble-1.jpg"
-         alt="بديل رخام 1 من Fawz"
-         width="400" height="280" loading="lazy">
-  </div>
+          <p class="section-intro" style="margin-bottom: 1.2rem">
+            
+          </p>
 
-  <div class="upload-slot">
-    <strong>بديل رخام 2</strong>
-    <img src="marble-2.jpg"
-         alt="بديل رخام 2 من Fawz"
-         width="400" height="280" loading="lazy">
-  </div>
+          <div class="upload-grid">
+            <div class="upload-slot">
+              <strong>بديل رخام 1</strong>
+              <img
+                src="marble-1.jpg"
+                alt="بديل رخام 1 من Fawz"
+                width="400"
+                height="280"
+                loading="lazy"
+              />
+            </div>
 
-  <div class="upload-slot">
-    <strong>شيبورد 1</strong>
-    <img src="chipboard-1.jpg"
-         alt="شيبورد 1 من Fawz"
-         width="400" height="280" loading="lazy">
-  </div>
+            <div class="upload-slot">
+              <strong>بديل رخام 2</strong>
+              <img
+                src="marble-2.jpg"
+                alt="بديل رخام 2 من Fawz"
+                width="400"
+                height="280"
+                loading="lazy"
+              />
+            </div>
 
-  <div class="upload-slot">
-    <strong>شيبورد 2</strong>
-    <img src="chipboard-2.jpg"
-         alt="شيبورد 2 من Fawz"
-         width="400" height="280" loading="lazy">
-  </div>
-</div>
+            <div class="upload-slot">
+              <strong>شيبورد 1</strong>
+              <img
+                src="chipboard-1.jpg"
+                alt="شيبورد 1 من Fawz"
+                width="400"
+                height="280"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="upload-slot">
+              <strong>شيبورد 2</strong>
+              <img
+                src="chipboard-2.jpg"
+                alt="شيبورد 2 من Fawz"
+                width="400"
+                height="280"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </article>
-        
-      
 
+        <article class="panel">
+          <div class="kicker">Presentation Quality</div>
+          <h2 class="section-title"> كتالوج الماركات</h2>
+          <p class="section-intro">
+            
+          </p>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="section" id="contact">
       <div class="container">
         <div class="contact-card">
-          <div>
+          <div class="contact-text">
             <div class="kicker">Contact</div>
             <h2 class="section-title">تواصل مع Fawz</h2>
-            <p class="section-intro" style="margin-bottom:.75rem">العنوان المعتمد: حمص - شارع البرازيل - مقابل برج هنادي.</p>
+            <p class="section-intro" style="margin-bottom: 0.75rem">
+              العنوان المعتمد: حمص - شارع البرازيل - مقابل برج هنادي. تم التركيز هنا على سهولة الوصول
+              والاتصال بدل عرض أوقات عمل، لتبقى الهوية نظيفة وبسيطة.
+            </p>
             <div class="contact-meta">
               <span class="pill">الهاتف / واتساب: 0995599603</span>
               <span class="pill">حمص - شارع البرازيل</span>
               <span class="pill">مقابل برج هنادي مباشرة</span>
             </div>
           </div>
-          <a class="btn btn-primary" href="https://wa.me/963995599603" target="_blank" rel="noopener noreferrer">راسلنا على واتساب</a>
+
+          <a
+            class="btn btn-primary contact-pill"
+            href="https://wa.me/963995599603"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            راسلنا على واتساب
+          </a>
         </div>
       </div>
     </section>
@@ -290,21 +1011,33 @@
 
   <footer class="footer">
     <div class="container">
-    
+      جميع الحقوق محفوظة لـ Fawz Paints & Decor.
     </div>
   </footer>
 
   <script>
-    (function(){
-      const btn=document.querySelector('[data-theme-toggle]');
-      const root=document.documentElement;
-      let theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
-      const moon='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      const sun='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-      root.setAttribute('data-theme',theme);btn.innerHTML=theme==='dark'?sun:moon;
-      btn.addEventListener('click',()=>{theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);btn.innerHTML=theme==='dark'?sun:moon;});
-      reader.readAsDataURL(file);
-    }
+    (function () {
+      const btn = document.querySelector("[data-theme-toggle]");
+      const root = document.documentElement;
+      let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+
+      const moon =
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      const sun =
+        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+
+      root.setAttribute("data-theme", theme);
+      if (btn) btn.innerHTML = theme === "dark" ? sun : moon;
+
+      btn &&
+        btn.addEventListener("click", () => {
+          theme = theme === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", theme);
+          btn.innerHTML = theme === "dark" ? sun : moon;
+        });
+    })();
   </script>
 </body>
 </html>
