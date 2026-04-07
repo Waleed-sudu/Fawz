@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fawz Paints & Decor</title>
-  <meta name="description" content="موقع فاخر ومتكامل لمعرض Fawz Paints & Decor في حمص - شارع البرازيل، يقدم حلول دهان وبديل رخام وشيبورد بتصميم بمستوى الماركات العالمية." />
+  <meta
+    name="description"
+    content="موقع فاخر ومتكامل لمعرض Fawz Paints & Decor في حمص - شارع البرازيل، يقدم حلول دهان وبديل رخام وشيبورد بتصميم بمستوى الماركات العالمية."
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -656,7 +659,13 @@
   <header class="header">
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="Fawz Paints & Decor">
-        <img src="fawz-logo.jpg" alt="شعار Fawz Paints & Decor" width="60" height="60" loading="eager" />
+        <img
+          src="fawz-logo.jpg"
+          alt="شعار Fawz Paints & Decor"
+          width="60"
+          height="60"
+          loading="eager"
+        />
         <div class="brand-copy">
           <strong>Fawz</strong>
           <span>Paints & Decor</span>
@@ -680,9 +689,7 @@
           stroke="currentColor"
           stroke-width="2"
         >
-          <path
-            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-          />
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       </button>
     </div>
@@ -700,11 +707,12 @@
           <h1>
             هوية فاخرة لعلامة دهان وديكور تحاكي أسلوب الماركات العالمية وتُظهر خبرة تصميم حقيقية.
           </h1>
-        
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="#gallery">استعراض الأعمال</a>
             <a class="btn btn-ghost" href="#materials">اكتشف الخامات</a>
           </div>
+
           <div class="hero-meta">
             <span class="pill">حمص - شارع البرازيل - مقابل برج هنادي</span>
             <span class="pill">واتساب: 0995599603</span>
@@ -751,10 +759,8 @@
           <div class="kicker">Design Language</div>
           <h2 class="section-title">أسلوب تصميم بخبرة طويلة</h2>
           <p class="section-intro">
-          
           </p>
           <ul>
-          
           </ul>
         </article>
       </div>
@@ -768,7 +774,6 @@
             <div class="kicker">Core Materials</div>
             <h2 class="section-title">الخامات الرئيسية</h2>
             <p class="section-intro">
-              
             </p>
           </div>
         </div>
@@ -851,7 +856,6 @@
             </div>
             <h3>حلول ديكور متكاملة</h3>
             <p>
-              
             </p>
           </article>
         </div>
@@ -889,7 +893,6 @@
               اختيار الخامات
             </h3>
             <p class="section-intro" style="margin: 0">
-              
             </p>
           </article>
 
@@ -914,7 +917,6 @@
           <div class="kicker">Visual Gallery</div>
           <h2 class="section-title">معرض بديل الرخام والشيبورد</h2>
           <p class="section-intro" style="margin-bottom: 1.2rem">
-            
           </p>
 
           <div class="upload-grid">
@@ -968,7 +970,6 @@
           <div class="kicker">Presentation Quality</div>
           <h2 class="section-title"> كتالوج الماركات</h2>
           <p class="section-intro">
-            
           </p>
           <ul>
             <li></li>
@@ -1019,6 +1020,8 @@
     (function () {
       const btn = document.querySelector("[data-theme-toggle]");
       const root = document.documentElement;
+
+      // تحديد الثيم الابتدائي حسب تفضيل النظام
       let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
@@ -1031,12 +1034,13 @@
       root.setAttribute("data-theme", theme);
       if (btn) btn.innerHTML = theme === "dark" ? sun : moon;
 
-      btn &&
+      if (btn) {
         btn.addEventListener("click", () => {
           theme = theme === "dark" ? "light" : "dark";
           root.setAttribute("data-theme", theme);
           btn.innerHTML = theme === "dark" ? sun : moon;
         });
+      }
     })();
   </script>
 </body>
