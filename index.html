@@ -1,1046 +1,1284 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fawz Paints & Decor</title>
-  <meta
-    name="description"
-    content="موقع فاخر ومتكامل لمعرض Fawz Paints & Decor في حمص - شارع البرازيل، يقدم حلول دهان وبديل رخام وشيبورد بتصميم بمستوى الماركات العالمية."
-  />
+  <title>Fawz Paints & Decor — حمص</title>
+  <meta name="description" content="Fawz Paints & Decor — وكيل معتمد لأبرز ماركات الدهان في سوريا. حمص، شارع البرازيل." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:wght@500;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+ 
   <style>
-    :root,
-    [data-theme="light"] {
-      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2.3rem, 1.2rem + 3vw, 4.4rem);
-
-      --space-2: 0.5rem;
-      --space-3: 0.75rem;
-      --space-4: 1rem;
-      --space-5: 1.25rem;
-      --space-6: 1.5rem;
-      --space-8: 2rem;
-      --space-10: 2.5rem;
-      --space-12: 3rem;
-      --space-16: 4rem;
-      --space-20: 5rem;
-
-      --color-bg: #f4f2ee;
-      --color-surface: #faf8f5;
-      --color-surface-2: #ffffff;
-      --color-surface-soft: #f7f4f0;
-      --color-surface-offset: #ede6de;
-
-      --color-border: #d7d1c9;
-      --color-divider: #dcd5cd;
-
-      --color-navy: #141b3b;
-      --color-plum: #5a2c82;
-      --color-amber: #f49b3f;
-      --color-teal: #86d4dc;
-
-      --color-text: #141525;
-      --color-text-muted: #5e647d;
-      --color-text-faint: #979bb0;
-      --color-text-inverse: #fbfaf6;
-
-      --color-primary: #141b3b;
-      --color-primary-soft: #242b4a;
-      --color-primary-hover: #0f1530;
-
-      --radius-sm: 0.6rem;
-      --radius-md: 0.9rem;
-      --radius-lg: 1.3rem;
-      --radius-xl: 1.9rem;
+    :root {
+      --navy:   #0e1628;
+      --navy2:  #16213e;
+      --gold:   #c9a84c;
+      --gold2:  #e8c97e;
+      --cream:  #f7f3ec;
+      --cream2: #ede8df;
+      --white:  #ffffff;
+      --muted:  #6b7280;
+      --muted2: #9ca3af;
+      --border: rgba(201,168,76,0.18);
+      --surface: rgba(255,255,255,0.05);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
       --radius-pill: 999px;
-
-      --shadow-sm: 0 2px 12px rgba(19, 24, 44, 0.08);
-      --shadow-md: 0 18px 55px rgba(19, 24, 44, 0.14);
-
-      --content: 1180px;
-      --font-body: "Cairo", sans-serif;
-      --font-display: "Cormorant Garamond", serif;
+      --shadow: 0 20px 60px rgba(14,22,40,0.35);
+      --shadow-sm: 0 4px 20px rgba(14,22,40,0.15);
+      --font-ar: 'Cairo', sans-serif;
+      --font-en: 'Montserrat', sans-serif;
+      --font-display: 'Playfair Display', serif;
+      --content: 1200px;
     }
-
+ 
+    [data-theme="light"] {
+      --bg: var(--cream);
+      --bg2: var(--cream2);
+      --text: var(--navy);
+      --text-muted: #4b5563;
+      --text-faint: #9ca3af;
+      --card-bg: var(--white);
+      --card-border: rgba(14,22,40,0.09);
+      --header-bg: rgba(247,243,236,0.88);
+      --header-border: rgba(14,22,40,0.10);
+    }
+ 
     [data-theme="dark"] {
-      --color-bg: #10121b;
-      --color-surface: #151927;
-      --color-surface-2: #1a2030;
-      --color-surface-soft: #181d2a;
-      --color-surface-offset: #21283a;
-
-      --color-border: #31374a;
-      --color-divider: #2a3040;
-
-      --color-text: #f2efe7;
-      --color-text-muted: #c2beb3;
-      --color-text-faint: #8c90a3;
-      --color-text-inverse: #10121b;
-
-      --color-primary: #8da2ff;
-      --color-primary-soft: #6c7fdd;
-      --color-primary-hover: #b8c5ff;
-
-      --shadow-sm: 0 2px 14px rgba(0, 0, 0, 0.24);
-      --shadow-md: 0 22px 60px rgba(0, 0, 0, 0.46);
+      --bg: var(--navy);
+      --bg2: var(--navy2);
+      --text: #f0ead8;
+      --text-muted: #b8b0a0;
+      --text-faint: #6b7280;
+      --card-bg: rgba(255,255,255,0.04);
+      --card-border: rgba(201,168,76,0.14);
+      --header-bg: rgba(14,22,40,0.88);
+      --header-border: rgba(201,168,76,0.12);
     }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-    }
-
+ 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+ 
     body {
-      font-family: var(--font-body);
-      background: radial-gradient(circle at top, var(--color-surface-soft), var(--color-bg));
-      color: var(--color-text);
-      font-size: var(--text-base);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 1rem;
       line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
     }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
+ 
+    [data-lang="ar"] body,
+    [data-lang="ar"] { font-family: var(--font-ar); }
+    [data-lang="en"] body,
+    [data-lang="en"] { font-family: var(--font-en); }
+ 
+    .lang-ar { display: block; }
+    .lang-en { display: none; }
+    [data-lang="en"] .lang-ar { display: none; }
+    [data-lang="en"] .lang-en { display: block; }
+    [data-lang="en"] .lang-en-inline { display: inline; }
+    .lang-en-inline { display: none; }
+    [data-lang="en"] .lang-ar-inline { display: none; }
+    .lang-ar-inline { display: inline; }
+ 
+    a { text-decoration: none; color: inherit; }
+    button { border: none; background: none; font: inherit; cursor: pointer; }
+    img { display: block; max-width: 100%; height: auto; }
+ 
+    .container { width: min(calc(100% - 2rem), var(--content)); margin-inline: auto; }
+ 
+    /* ── DECORATIVE BG ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 20% 10%, rgba(201,168,76,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 90%, rgba(14,22,40,0.4) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button {
-      border: none;
-      background: none;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .container {
-      width: min(calc(100% - 2rem), var(--content));
-      margin-inline: auto;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      right: 1rem;
-      background: var(--color-primary);
-      color: var(--color-text-inverse);
-      padding: 0.8rem 1rem;
-      border-radius: var(--radius-pill);
-      z-index: 999;
-    }
-
-    .skip-link:focus {
-      top: 1rem;
-    }
-
+ 
+    /* ── HEADER ── */
     .header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: color-mix(in srgb, var(--color-bg) 88%, transparent);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid color-mix(in srgb, var(--color-divider) 70%, transparent);
+      z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--header-border);
     }
-
+ 
     .header-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 0.9rem 0;
+      padding: 0.85rem 0;
     }
-
+ 
     .brand {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.85rem;
       min-width: 0;
     }
-
-    .brand img {
-      width: 60px;
-      height: 60px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: var(--shadow-sm);
-      background: var(--color-surface-2);
-    }
-
-    .brand-copy {
+ 
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--navy2), var(--navy));
+      border: 1.5px solid var(--gold);
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
     }
-
-    .brand-copy strong {
+ 
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+ 
+    .brand-logo-svg {
       font-family: var(--font-display);
-      font-size: 2.1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -0.02em;
+    }
+ 
+    .brand-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
       line-height: 1;
-      color: var(--color-primary);
+      color: var(--gold);
+      letter-spacing: 0.01em;
     }
-
-    .brand-copy span {
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
+ 
+    .brand-text span {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
     }
-
+ 
     .nav {
       display: flex;
-      gap: 0.45rem;
+      gap: 0.25rem;
       flex-wrap: wrap;
     }
-
+ 
     .nav a {
-      padding: 0.6rem 0.95rem;
+      padding: 0.5rem 0.9rem;
       border-radius: var(--radius-pill);
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      transition: all 0.2s;
     }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      background: var(--color-surface-2);
-      color: var(--color-text);
+ 
+    .nav a:hover {
+      background: var(--card-bg);
+      color: var(--gold);
     }
-
-    .theme-toggle {
-      width: 46px;
-      height: 46px;
-      border-radius: var(--radius-pill);
-      background: var(--color-surface-2);
-      box-shadow: var(--shadow-sm);
-      color: var(--color-text);
-    }
-
-    .hero {
-      padding: clamp(3.4rem, 7vw, 6.8rem) 0;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
+ 
+    .header-controls {
+      display: flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.55rem 1rem;
+    }
+ 
+    .icon-btn {
+      width: 42px;
+      height: 42px;
       border-radius: var(--radius-pill);
-      background: color-mix(in srgb, var(--color-surface-2) 70%, var(--color-surface-soft));
-      border: 1px solid color-mix(in srgb, var(--color-navy) 18%, transparent);
-      color: var(--color-primary);
-      font-size: var(--text-sm);
-      margin-bottom: 1rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text-muted);
+      transition: all 0.2s;
     }
-
-    .eyebrow span {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--color-amber), var(--color-plum));
+ 
+    .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+ 
+    .lang-btn {
+      height: 42px;
+      padding: 0 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      transition: all 0.2s;
     }
-
+ 
+    .lang-btn:hover { border-color: var(--gold); color: var(--gold); }
+ 
+    /* ── HERO ── */
+    .hero {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+      position: relative;
+      z-index: 1;
+    }
+ 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+ 
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.4rem;
+    }
+ 
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+ 
     h1 {
       font-family: var(--font-display);
-      font-size: var(--text-2xl);
-      line-height: 1.05;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.1;
       letter-spacing: 0.01em;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
-
-    .lead {
-      max-width: 60ch;
-      color: var(--color-text-muted);
-      margin-bottom: 1.5rem;
+ 
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
     }
-
+ 
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 52ch;
+      margin-bottom: 2rem;
+      line-height: 1.9;
+    }
+ 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.9rem;
-      margin-bottom: 1.1rem;
+      gap: 0.8rem;
+      margin-bottom: 2.2rem;
     }
-
+ 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0.95rem 1.35rem;
+      gap: 0.5rem;
+      min-height: 50px;
+      padding: 0 1.6rem;
       border-radius: var(--radius-pill);
       font-weight: 700;
-      transition: all 0.18s ease;
+      font-size: 0.88rem;
+      letter-spacing: 0.06em;
+      transition: all 0.22s;
+      white-space: nowrap;
     }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary));
-      color: var(--color-text-inverse);
-      box-shadow: 0 14px 30px rgba(9, 12, 32, 0.35);
+ 
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: var(--navy);
+      box-shadow: 0 10px 30px rgba(201,168,76,0.35);
     }
-
-    .btn-primary:hover {
-      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
-      transform: translateY(-1px);
+ 
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(201,168,76,0.45); }
+ 
+    .btn-outline {
+      border: 1.5px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text-muted);
     }
-
-    .btn-ghost {
-      background: color-mix(in srgb, var(--color-surface-2) 85%, transparent);
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-      color: var(--color-text-muted);
-    }
-
-    .btn-ghost:hover {
-      background: var(--color-surface-2);
-      color: var(--color-text);
-    }
-
-    .hero-meta {
+ 
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+ 
+    .hero-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-
-    .pill {
-      padding: 0.55rem 0.95rem;
-      border-radius: var(--radius-pill);
-      background: var(--color-surface-2);
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
-    }
-
-    .hero-visual {
-      position: relative;
-    }
-
-    .hero-frame {
-      background: radial-gradient(circle at top, var(--color-surface-2), var(--color-surface-soft));
-      border-radius: 2.4rem;
-      padding: 1.3rem;
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-      box-shadow: var(--shadow-md);
-    }
-
-    .hero-frame img {
-      border-radius: 2rem;
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-    }
-
-    .hero-tag {
-      position: absolute;
-      left: 1.6rem;
-      bottom: 1.6rem;
-      padding: 0.65rem 1rem;
-      border-radius: 1.2rem;
-      background: color-mix(in srgb, var(--color-bg) 92%, transparent);
-      backdrop-filter: blur(12px);
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-      display: flex;
-      align-items: center;
       gap: 0.6rem;
     }
-
-    .hero-tag span {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--color-amber), var(--color-plum));
+ 
+    .pill {
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      font-size: 0.78rem;
+      color: var(--text-muted);
     }
-
-    .section {
-      padding: clamp(3.1rem, 6vw, 5.2rem) 0;
+ 
+    /* Hero Visual */
+    .hero-visual { position: relative; }
+ 
+    .hero-frame {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: var(--bg2);
+      padding: 1rem;
     }
-
-    .section-header {
+ 
+    .hero-frame img {
+      border-radius: 20px;
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+ 
+    .hero-frame-placeholder {
+      border-radius: 20px;
+      width: 100%;
+      height: 460px;
+      background: linear-gradient(135deg, var(--navy2) 0%, #1a2a4a 100%);
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1.2rem;
-      margin-bottom: 1.6rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
     }
-
-    .kicker {
-      font-size: var(--text-xs);
-      letter-spacing: 0.18em;
+ 
+    .hero-frame-placeholder svg { color: var(--gold); opacity: 0.5; }
+    .hero-frame-placeholder span { color: var(--gold); opacity: 0.4; font-size: 0.8rem; letter-spacing: 0.1em; }
+ 
+    .hero-badge {
+      position: absolute;
+      bottom: 1.8rem;
+      right: 1.8rem;
+      padding: 0.7rem 1.1rem;
+      border-radius: 14px;
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+ 
+    .hero-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+ 
+    /* ── SECTION BASE ── */
+    .section { padding: clamp(3rem, 6vw, 5.5rem) 0; position: relative; z-index: 1; }
+ 
+    .section-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--color-text-faint);
+      color: var(--gold);
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
-
+ 
     .section-title {
       font-family: var(--font-display);
-      font-size: var(--text-xl);
-      margin-bottom: 0.4rem;
+      font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
     }
-
-    .section-intro {
-      max-width: 65ch;
-      color: var(--color-text-muted);
+ 
+    .section-sub {
+      max-width: 60ch;
+      color: var(--text-muted);
+      line-height: 1.9;
     }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 1.6rem;
+ 
+    .section-head {
+      margin-bottom: 2.5rem;
     }
-
-    .panel {
-      background: var(--color-surface);
-      border-radius: var(--radius-xl);
-      padding: 1.7rem;
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-      box-shadow: var(--shadow-sm);
+ 
+    /* ── DIVIDER ── */
+    .gold-divider {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      border-radius: 2px;
+      margin: 1rem 0 1.5rem;
     }
-
-    .panel ul {
-      list-style: none;
-      display: grid;
-      gap: 0.75rem;
-      margin-top: 1rem;
+ 
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 1.5rem; }
+ 
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      backdrop-filter: blur(8px);
     }
-
-    .panel li {
-      padding: 0.85rem 1rem;
-      border-radius: 1.1rem;
-      background: var(--color-surface-2);
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
-    }
-
-    .badge-row {
+ 
+    .value-list { list-style: none; margin-top: 1.5rem; display: grid; gap: 0.6rem; }
+ 
+    .value-list li {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 0.75rem;
-      margin-top: 1.1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      background: var(--bg2);
+      font-size: 0.88rem;
+      color: var(--text-muted);
     }
-
+ 
+    .value-list li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+ 
+    .badge-wrap { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.3rem; }
+ 
     .badge {
-      padding: 0.45rem 0.75rem;
+      padding: 0.4rem 0.8rem;
       border-radius: var(--radius-pill);
-      background: color-mix(in srgb, var(--color-amber) 10%, var(--color-surface-2));
-      color: var(--color-primary);
-      font-size: var(--text-xs);
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold);
+      background: rgba(201,168,76,0.07);
     }
-
-    .materials-grid {
+ 
+    /* ── SERVICES ── */
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+ 
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: left;
+    }
+ 
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); border-color: var(--border); }
+    .service-card:hover::after { transform: scaleX(1); }
+ 
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      margin-bottom: 1.1rem;
+    }
+ 
+    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .service-card p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.7; }
+ 
+    /* ── PROCESS ── */
+    .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+ 
+    .step-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 1.8rem;
+    }
+ 
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 0.85rem;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1rem;
+    }
+ 
+    .step-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .step-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; }
+ 
+    /* ── GALLERY ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+ 
+    .gallery-slot {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg2);
+      border: 1px solid var(--card-border);
+      aspect-ratio: 4/3;
+      position: relative;
+    }
+ 
+    .gallery-slot img { width: 100%; height: 100%; object-fit: cover; }
+ 
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--text-faint);
+      font-size: 0.75rem;
+    }
+ 
+    /* ── BRANDS CATALOG ── */
+    .brands-section { background: var(--bg2); padding: clamp(3rem,6vw,5.5rem) 0; position: relative; z-index: 1; }
+ 
+    .brands-intro {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+ 
+    .brands-intro .gold-divider { margin-inline: auto; }
+ 
+    .authorized-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(232,201,126,0.1));
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+ 
+    .brands-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
+      margin-bottom: 1rem;
     }
-
-    .material-card {
-      background: var(--color-surface);
+ 
+    .brand-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
-      padding: 1.3rem;
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .material-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 1.2rem;
-      display: grid;
-      place-items: center;
-      background: conic-gradient(
-        from 200deg,
-        var(--color-amber),
-        var(--color-plum),
-        var(--color-teal),
-        var(--color-amber)
-      );
-      color: #fff;
-    }
-
-    .material-card h3 {
-      font-size: var(--text-lg);
-      margin: 0.9rem 0 0.45rem;
-    }
-
-    .material-card p {
-      font-size: var(--text-sm);
-      color: var(--color-text-muted);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    .step {
-      background: var(--color-surface);
-      padding: 1.4rem;
-      border-radius: var(--radius-lg);
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
-    }
-
-    .step-num {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--color-primary) 20%, var(--color-bg));
-      display: grid;
-      place-items: center;
-      font-size: var(--text-sm);
-      color: var(--color-primary);
-      margin-bottom: 0.7rem;
-    }
-
-    .gallery-wrap {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 1.5rem;
-    }
-
-    .upload-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    .upload-slot {
-      border-radius: 1.2rem;
-      padding: 1rem;
-      min-height: 220px;
-      background: var(--color-surface-2);
-      border: 1px solid color-mix(in srgb, var(--color-primary) 18%, transparent);
+      padding: 1.6rem 1.2rem;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-      text-align: right;
-      color: var(--color-text-muted);
-      gap: 0.6rem;
+      align-items: center;
+      gap: 0.9rem;
+      text-align: center;
+      transition: all 0.25s;
     }
-
-    .upload-slot strong {
-      font-size: var(--text-sm);
-      color: var(--color-text);
-    }
-
-    .upload-slot img {
-      border-radius: 1rem;
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .contact-card {
-      background: var(--color-surface);
-      padding: 1.7rem;
-      border-radius: var(--radius-xl);
-      border: 1px solid color-mix(in srgb, var(--color-border) 80%, transparent);
+ 
+    .brand-card:hover {
+      border-color: var(--border);
+      transform: translateY(-3px);
       box-shadow: var(--shadow-sm);
+    }
+ 
+    .brand-logo-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--bg), var(--bg2));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+ 
+    .brand-logo-box img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+ 
+    .brand-logo-box.no-img {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+ 
+    .brand-logo-text {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-align: center;
+      line-height: 1.2;
+    }
+ 
+    .brand-card h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+ 
+    .brand-card p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+ 
+    .brand-card .agent-tag {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,168,76,0.1);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+    }
+ 
+    .more-brands {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.2rem;
+      border-radius: var(--radius-lg);
+      background: var(--card-bg);
+      border: 1px dashed var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+ 
+    .more-brands strong { color: var(--gold); }
+ 
+    /* ── CONTACT ── */
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.5rem;
+      gap: 2rem;
+      position: relative;
+      overflow: hidden;
     }
-
-    .contact-text {
-      flex: 1;
-      min-width: 0;
+ 
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+      pointer-events: none;
     }
-
-    .contact-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-top: 1rem;
-    }
-
+ 
+    .contact-info { flex: 1; min-width: 0; }
+ 
+    .contact-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.2rem; }
+ 
     .contact-pill {
-      min-width: 210px;
-      padding-inline: 1.6rem;
-      height: 56px;
-      border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      font-size: var(--text-sm);
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--card-border);
+      background: var(--bg2);
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
-
+ 
+    /* ── FOOTER ── */
     .footer {
-      padding: 2.2rem 0;
-      border-top: 1px solid color-mix(in srgb, var(--color-divider) 80%, transparent);
-      color: var(--color-text-muted);
-      font-size: var(--text-sm);
+      padding: 1.8rem 0;
+      border-top: 1px solid var(--card-border);
+      text-align: center;
+      color: var(--text-faint);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      position: relative;
+      z-index: 1;
     }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .about-grid,
-      .materials-grid,
-      .gallery-wrap,
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .contact-card {
-        flex-direction: row;
-      }
-
-      .nav {
-        display: none;
-      }
+ 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .brands-grid { grid-template-columns: repeat(3, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
-    @media (max-width: 720px) {
-      .hero-grid,
-      .about-grid,
-      .gallery-wrap,
-      .materials-grid,
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .upload-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-frame img {
-        height: 360px;
-      }
-
-      .brand-copy strong {
-        font-size: 1.8rem;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-      }
-
-      .materials-grid {
-        gap: 0.9rem;
-      }
-
-      .contact-card {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .contact-pill {
-        width: 100%;
-      }
+ 
+    @media (max-width: 860px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .nav { display: none; }
     }
+ 
+    @media (max-width: 640px) {
+      .services-grid, .brands-grid, .process-grid, .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .contact-card { flex-direction: column; }
+      .brand-logo-box { width: 64px; height: 64px; }
+    }
+ 
+    @media (max-width: 420px) {
+      .services-grid, .brands-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+ 
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+ 
+    .hero > .container { animation: fadeUp 0.7s ease both; }
   </style>
 </head>
+ 
 <body>
-  <a class="skip-link" href="#content">تجاوز إلى المحتوى</a>
-
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-row">
       <a class="brand" href="#top" aria-label="Fawz Paints & Decor">
-        <img
-          src="fawz-logo.jpg"
-          alt="شعار Fawz Paints & Decor"
-          width="60"
-          height="60"
-          loading="eager"
-        />
-        <div class="brand-copy">
+        <div class="brand-logo">
+          <img src="fawz-logo.jpg" alt="Fawz Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <span class="brand-logo-svg" style="display:none;">F</span>
+        </div>
+        <div class="brand-text">
           <strong>Fawz</strong>
-          <span>Paints & Decor</span>
+          <span>Paints &amp; Decor</span>
         </div>
       </a>
-
-      <nav class="nav" aria-label="التنقل الرئيسي">
-        <a href="#about">عن فوز</a>
-        <a href="#materials">الخامات</a>
-        <a href="#process">طريقة العمل</a>
-        <a href="#gallery">المعرض</a>
-        <a href="#contact">التواصل</a>
+ 
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#about"><span class="lang-ar-inline">عن فوز</span><span class="lang-en-inline">About</span></a>
+        <a href="#services"><span class="lang-ar-inline">خدماتنا</span><span class="lang-en-inline">Services</span></a>
+        <a href="#brands"><span class="lang-ar-inline">الماركات</span><span class="lang-en-inline">Brands</span></a>
+        <a href="#gallery"><span class="lang-ar-inline">المعرض</span><span class="lang-en-inline">Gallery</span></a>
+        <a href="#contact"><span class="lang-ar-inline">تواصل معنا</span><span class="lang-en-inline">Contact</span></a>
       </nav>
-
-      <button class="theme-toggle" data-theme-toggle aria-label="تبديل الوضع الليلي">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-        </svg>
-      </button>
+ 
+      <div class="header-controls">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">
+          <span class="lang-ar-inline">EN</span>
+          <span class="lang-en-inline">عر</span>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
     </div>
   </header>
-
-  <main id="content">
-    <!-- HERO -->
-    <section class="hero" id="top">
+ 
+  <main id="top">
+    <!-- ── HERO ── -->
+    <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">
-            <span></span>
-            Fawz Paints & Decor • Premium House Finishing
+          <div class="hero-eyebrow">
+            <span class="lang-ar">حمص · شارع البرازيل · وكيل معتمد</span>
+            <span class="lang-en">Homs · Brazil St · Authorized Agent</span>
           </div>
-          <h1>
-            هوية فاخرة لعلامة دهان وديكور تحاكي أسلوب الماركات العالمية وتُظهر خبرة تصميم حقيقية.
+ 
+          <h1 class="lang-ar">
+            <em>جمال</em> لكل جدار،<br/>فخامة لكل مساحة
           </h1>
-
+          <h1 class="lang-en">
+            <em>Beauty</em> for Every Wall,<br/>Elegance in Every Space
+          </h1>
+ 
+          <p class="hero-sub lang-ar">
+            Fawz Paints & Decor — وجهتك المتكاملة للدهانات، بديل الرخام، والشيبورد. وكيل معتمد لأبرز الماركات العالمية والمحلية في حمص.
+          </p>
+          <p class="hero-sub lang-en">
+            Fawz Paints & Decor — your complete destination for paints, marble alternatives, and chipboard décor. Authorized agent for leading brands in Homs, Syria.
+          </p>
+ 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#gallery">استعراض الأعمال</a>
-            <a class="btn btn-ghost" href="#materials">اكتشف الخامات</a>
+            <a class="btn btn-gold" href="#gallery">
+              <span class="lang-ar">استعراض الأعمال</span>
+              <span class="lang-en">View Our Work</span>
+            </a>
+            <a class="btn btn-outline" href="#brands">
+              <span class="lang-ar">كتالوج الماركات</span>
+              <span class="lang-en">Brand Catalog</span>
+            </a>
           </div>
-
-          <div class="hero-meta">
-            <span class="pill">حمص - شارع البرازيل - مقابل برج هنادي</span>
-            <span class="pill">واتساب: 0995599603</span>
+ 
+          <div class="hero-pills">
+            <span class="pill">
+              <span class="lang-ar-inline">حمص · شارع البرازيل · مقابل برج هنادي</span>
+              <span class="lang-en-inline">Homs · Brazil St · Opposite Hanadie Tower</span>
+            </span>
+            <span class="pill">
+              <span class="lang-ar-inline">واتساب: 0995599603</span>
+              <span class="lang-en-inline">WhatsApp: 0995599603</span>
+            </span>
           </div>
         </div>
-
+ 
         <div class="hero-visual">
           <div class="hero-frame">
-            <img
-              src="fawz-hero.jpg"
-              alt="فراشة Fawz بألوان الدهان داخل أستوديو ديكور"
-              width="900"
-              height="700"
-              loading="eager"
-            />
+            <img src="fawz-hero.jpg" alt="Fawz Showroom" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="hero-frame-placeholder" style="display:none;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9l4-4 4 4 4-4 4 4"/><path d="M3 15l4 4 4-4 4 4 4-4"/></svg>
+              <span>FAWZ PAINTS & DECOR</span>
+            </div>
           </div>
-          <div class="hero-tag">
-            <span></span>
-            مشهد مستوحى من عالم الدهان وديكور الجدران.
+          <div class="hero-badge">
+            <span class="lang-ar-inline">وكيل معتمد لأبرز الماركات</span>
+            <span class="lang-en-inline">Authorized Agent · Premium Brands</span>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ABOUT -->
+ 
+    <!-- ── ABOUT ── -->
     <section class="section" id="about">
-      <div class="container about-grid">
-        <article class="panel">
-          <div class="kicker">Brand Story</div>
-          <h2 class="section-title">عن Fawz</h2>
-          <p class="section-intro">
-            Fawz Paints & Decor أكثر من معرض دهانات؛ هي علامة تهتم بتجربة البيت كاملًا، من أول لمسة
-            لون على الجدار إلى آخر تفصيل في بديل الرخام والشيبورد، مع تركيز على تنفيذ نظيف يليق
-            بالهوية.
-          </p>
-          <div class="badge-row">
-            <span class="badge">بديل رخام</span>
-            <span class="badge">شيبورد وديكور جدران</span>
-            <span class="badge">دهانات داخلية وخارجية</span>
-          </div>
-        </article>
-
-        <article class="panel">
-          <div class="kicker">Design Language</div>
-          <h2 class="section-title">أسلوب تصميم بخبرة طويلة</h2>
-          <p class="section-intro">
-          </p>
-          <ul>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- MATERIALS -->
-    <section class="section" id="materials">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="kicker">Core Materials</div>
-            <h2 class="section-title">الخامات الرئيسية</h2>
-            <p class="section-intro">
+        <div class="about-grid">
+          <article class="card">
+            <div class="section-tag lang-ar">من نحن</div>
+            <div class="section-tag lang-en">About Us</div>
+            <h2 class="section-title lang-ar">Fawz Paints & Decor</h2>
+            <h2 class="section-title lang-en">Fawz Paints & Decor</h2>
+            <div class="gold-divider"></div>
+            <p class="section-sub lang-ar">
+              أكثر من مجرد معرض دهانات — نحن شركاؤك في تحويل مساحاتك إلى بيئات تعكس ذوقك وشخصيتك. نقدم حلولاً متكاملة من أول لمسة لون على الجدار وحتى آخر تفصيل في الديكور.
             </p>
-          </div>
-        </div>
-
-        <div class="materials-grid">
-          <article class="material-card">
-            <div class="material-icon">
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-              >
-                <path d="M3 21h18" />
-                <path d="M5 21V8l7-5 7 5v13" />
-              </svg>
+            <p class="section-sub lang-en">
+              More than just a paint store — we are your partners in transforming spaces into environments that reflect your taste and personality, from the first coat of paint to the final decorative detail.
+            </p>
+            <div class="badge-wrap">
+              <span class="badge lang-ar">بديل رخام</span>
+              <span class="badge lang-ar">شيبورد وديكور جدران</span>
+              <span class="badge lang-ar">دهانات داخلية وخارجية</span>
+              <span class="badge lang-ar">وكيل معتمد</span>
+              <span class="badge lang-en">Marble Alternative</span>
+              <span class="badge lang-en">Chipboard & Wall Décor</span>
+              <span class="badge lang-en">Interior & Exterior Paints</span>
+              <span class="badge lang-en">Authorized Agent</span>
             </div>
-            <h3>بديل الرخام</h3>
-            <p>
-              ألواح وPanels تعطي إحساس الرخام الطبيعي لكن بوزن أخف، تركيب أسهل، وسيناريوهات ألوان
-              متعددة تناسب الصالونات، المداخل، والجدران البارزة.
-            </p>
           </article>
-
-          <article class="material-card">
-            <div class="material-icon">
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-              >
-                <rect x="4" y="5" width="16" height="14" rx="2" />
-                <path d="M4 10h16" />
-              </svg>
-            </div>
-            <h3>الشيبورد وديكور الجدران</h3>
-            <p>
-              حلول جاهزة لتقسيم الجدران، خلق مستويات وظلال، ومزج الإضاءة مع التكسية، مع قابلية عرض
-              أشكال مختلفة مباشرة في قسم المعرض.
-            </p>
-          </article>
-
-          <article class="material-card">
-            <div class="material-icon">
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-              >
-                <path d="M14 4l6 6-9 9H5v-6l9-9z" />
-              </svg>
-            </div>
-            <h3>الدهانات</h3>
-            <p>
-              درجات ألوان داخلية وخارجية مدروسة،
-            </p>
-          </article>
-
-          <article class="material-card">
-            <div class="material-icon">
-              <svg
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.7"
-              >
-                <path d="M12 2v20" />
-                <path d="M2 12h20" />
-              </svg>
-            </div>
-            <h3>حلول ديكور متكاملة</h3>
-            <p>
-            </p>
+ 
+          <article class="card">
+            <div class="section-tag lang-ar">لماذا تختارنا</div>
+            <div class="section-tag lang-en">Why Choose Us</div>
+            <h2 class="section-title lang-ar">خبرة تُثبت نفسها</h2>
+            <h2 class="section-title lang-en">Proven Expertise</h2>
+            <div class="gold-divider"></div>
+            <ul class="value-list lang-ar">
+              <li>وكيل معتمد لأبرز الماركات في السوق</li>
+              <li>خبرة طويلة في الدهانات وتشطيبات الداخلية</li>
+              <li>استشارة مجانية لاختيار الألوان والخامات</li>
+              <li>تنفيذ احترافي بمعايير عالية الجودة</li>
+              <li>خدمة ما بعد البيع ومتابعة مستمرة</li>
+            </ul>
+            <ul class="value-list lang-en">
+              <li>Authorized agent for leading paint brands</li>
+              <li>Extensive experience in paints & interior finishes</li>
+              <li>Free consultation for color & material selection</li>
+              <li>Professional execution with high-quality standards</li>
+              <li>After-sales service and continuous follow-up</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- PROCESS -->
+ 
+    <!-- ── SERVICES ── -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag lang-ar">خدماتنا</div>
+          <div class="section-tag lang-en">Our Services</div>
+          <h2 class="section-title lang-ar">حلول تشطيب متكاملة</h2>
+          <h2 class="section-title lang-en">Complete Finishing Solutions</h2>
+          <div class="gold-divider"></div>
+          <p class="section-sub lang-ar">نوفر كل ما تحتاجه لإتمام مشروعك بأعلى مستوى من الجودة والأناقة.</p>
+          <p class="section-sub lang-en">We provide everything you need to complete your project with the highest level of quality and elegance.</p>
+        </div>
+ 
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4l6 6-9 9H5v-6l9-9z"/></svg>
+            </div>
+            <h3 class="lang-ar">الدهانات الداخلية والخارجية</h3>
+            <h3 class="lang-en">Interior & Exterior Paints</h3>
+            <p class="lang-ar">تشكيلة واسعة من الدهانات بدرجات ألوان مدروسة تناسب جميع الأذواق والمساحات، بجودة تدوم سنوات.</p>
+            <p class="lang-en">A wide range of paints in carefully curated shades suitable for all tastes and spaces, with durability that lasts for years.</p>
+          </article>
+ 
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/></svg>
+            </div>
+            <h3 class="lang-ar">بديل الرخام</h3>
+            <h3 class="lang-en">Marble Alternatives</h3>
+            <p class="lang-ar">ألواح وبانيلات تمنح إحساس الرخام الطبيعي بوزن أخف وتركيب أسهل، تناسب المداخل والصالونات والجدران البارزة.</p>
+            <p class="lang-en">Panels that provide the feel of natural marble with lighter weight and easier installation, ideal for entrances, living rooms, and accent walls.</p>
+          </article>
+ 
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 10h16"/><path d="M9 5v14"/></svg>
+            </div>
+            <h3 class="lang-ar">الشيبورد وديكور الجدران</h3>
+            <h3 class="lang-en">Chipboard & Wall Décor</h3>
+            <p class="lang-ar">حلول جاهزة لتقسيم الجدران وخلق عمق بصري، مع إمكانية عرض أشكال مختلفة مباشرة في قسم المعرض.</p>
+            <p class="lang-en">Ready-made solutions for wall partitioning and creating visual depth, with multiple designs available to view directly in the showroom.</p>
+          </article>
+ 
+          <article class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="lang-ar">استشارة وتصميم</h3>
+            <h3 class="lang-en">Design Consultation</h3>
+            <p class="lang-ar">فريقنا يساعدك في اختيار التوليفة المثالية من الألوان والخامات لتناسب مساحتك وميزانيتك.</p>
+            <p class="lang-en">Our team helps you choose the perfect combination of colors and materials to suit your space and budget.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ── BRANDS CATALOG ── -->
+    <section class="brands-section" id="brands">
+      <div class="container">
+        <div class="brands-intro">
+          <div class="authorized-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="lang-ar-inline">وكيل معتمد رسمي</span>
+            <span class="lang-en-inline">Official Authorized Agent</span>
+          </div>
+          <h2 class="section-title lang-ar">كتالوج الماركات المعتمدة</h2>
+          <h2 class="section-title lang-en">Authorized Brand Catalog</h2>
+          <div class="gold-divider" style="margin-inline:auto;"></div>
+          <p class="section-sub lang-ar" style="margin-inline:auto;">نحن وكيل معتمد لأبرز ماركات الدهانات والمواد الإنشائية، نضمن لك المنتج الأصلي بالسعر الرسمي وخدمة ما بعد البيع.</p>
+          <p class="section-sub lang-en" style="margin-inline:auto;">We are the authorized agent for leading paint and construction material brands, guaranteeing you genuine products at official prices with after-sales service.</p>
+        </div>
+ 
+        <div class="brands-grid">
+          <!-- Hermezz -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Hermezz</div>
+            </div>
+            <h4>Hermezz Paints</h4>
+            <p class="lang-ar">دهانات هيرميز — جودة عالية للمساحات الداخلية والخارجية</p>
+            <p class="lang-en">Premium quality paints for interior & exterior surfaces</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- GLC -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">GLC</div>
+            </div>
+            <h4>GLC Paints</h4>
+            <p class="lang-ar">دهانات GLC — ماركة عالمية ذات ثقة واسعة في الأسواق</p>
+            <p class="lang-en">A globally trusted brand with a wide market presence</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- Lucky -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Lucky</div>
+            </div>
+            <h4>Lucky Paints</h4>
+            <p class="lang-ar">دهانات Lucky — خيارات ألوان متعددة بأسعار تنافسية</p>
+            <p class="lang-en">Multiple color options at competitive prices</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- Sipes -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Sipes</div>
+            </div>
+            <h4>Sipes</h4>
+            <p class="lang-ar">سايبس — منتجات بناء ودهانات متخصصة</p>
+            <p class="lang-en">Specialized construction products & paints</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- Bello -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Bello</div>
+            </div>
+            <h4>Bello Paints</h4>
+            <p class="lang-ar">دهانات بيلو — تشطيبات راقية للمساحات الفاخرة</p>
+            <p class="lang-en">Premium finishes for luxury spaces</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- Catch -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Catch</div>
+            </div>
+            <h4>Catch Waterproof</h4>
+            <p class="lang-ar">مواد عزل مائي احترافية لحماية المباني</p>
+            <p class="lang-en">Professional waterproofing materials for building protection</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- Kobe -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Kobe</div>
+            </div>
+            <h4>Kobe Paints</h4>
+            <p class="lang-ar">دهانات كوبي — أداء متفوق ومتانة استثنائية</p>
+            <p class="lang-en">Superior performance and exceptional durability</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+ 
+          <!-- Sait -->
+          <div class="brand-card">
+            <div class="brand-logo-box no-img">
+              <div class="brand-logo-text">Sait</div>
+            </div>
+            <h4>Sait Adhesive</h4>
+            <p class="lang-ar">مواد لاصقة Sait — قوة تثبيت فائقة للمواد الإنشائية</p>
+            <p class="lang-en">Superior bonding adhesives for construction materials</p>
+            <span class="agent-tag lang-ar">وكيل معتمد</span>
+            <span class="agent-tag lang-en">Authorized Agent</span>
+          </div>
+        </div>
+ 
+        <div class="more-brands">
+          <span class="lang-ar">وأكثر من ذلك بكثير — <strong>تفضل بزيارتنا للاطلاع على الكتالوج الكامل</strong></span>
+          <span class="lang-en">And much more — <strong>visit us to explore the full catalog</strong></span>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ── HOW WE WORK ── -->
     <section class="section" id="process">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="kicker">How We Work</div>
-            <h2 class="section-title">طريقة عمل Fawz</h2>
-            <p class="section-intro">
-              فريق التنفيذ يهتم بأدق التفاصيل .
-            </p>
-          </div>
+        <div class="section-head">
+          <div class="section-tag lang-ar">طريقة عملنا</div>
+          <div class="section-tag lang-en">How We Work</div>
+          <h2 class="section-title lang-ar">ثلاث خطوات لنتيجة مثالية</h2>
+          <h2 class="section-title lang-en">Three Steps to a Perfect Result</h2>
+          <div class="gold-divider"></div>
         </div>
-
+ 
         <div class="process-grid">
-          <article class="step">
+          <article class="step-card">
             <div class="step-num">1</div>
-            <h3 class="section-title" style="font-size: var(--text-lg); margin-bottom: 0.4rem">
-              جلسة استكشاف
-            </h3>
-            <p class="section-intro" style="margin: 0">
-              نستمع فيها لأسلوب الحياة، الألوان المفضلة، وطبيعة المساحة، لنقترح حلول دهان وبديل رخام
-              وشيبورد تناسب شخصية البيت.
-            </p>
+            <h3 class="lang-ar">الاستشارة</h3>
+            <h3 class="lang-en">Consultation</h3>
+            <p class="lang-ar">نستمع لأسلوب حياتك، الألوان المفضلة، وطبيعة مساحتك، ثم نقترح الحلول الأمثل من دهانات وبديل رخام وشيبورد تناسب شخصية بيتك.</p>
+            <p class="lang-en">We listen to your lifestyle, color preferences, and space requirements, then recommend the optimal solutions in paints, marble alternatives, and wall décor.</p>
           </article>
-
-          <article class="step">
+ 
+          <article class="step-card">
             <div class="step-num">2</div>
-            <h3 class="section-title" style="font-size: var(--text-lg); margin-bottom: 0.4rem">
-              اختيار الخامات
-            </h3>
-            <p class="section-intro" style="margin: 0">
-            </p>
+            <h3 class="lang-ar">اختيار الخامات</h3>
+            <h3 class="lang-en">Material Selection</h3>
+            <p class="lang-ar">نرافقك في اختيار الخامات من بين كتالوج واسع من أبرز الماركات المعتمدة، مع عروض مباشرة في المعرض لتتخيل النتيجة قبل التنفيذ.</p>
+            <p class="lang-en">We guide you through our extensive catalog of authorized brands, with live showroom displays to visualize the outcome before execution.</p>
           </article>
-
-          <article class="step">
+ 
+          <article class="step-card">
             <div class="step-num">3</div>
-            <h3 class="section-title" style="font-size: var(--text-lg); margin-bottom: 0.4rem">
-              تنفيذ ومتابعة
-            </h3>
-            <p class="section-intro" style="margin: 0">
-              فريق التنفيذ يهتم بأدق التفاصيل، بينما نوثق العمل بصور يمكن إضافتها مباشرة في قسم
-              المعرض لتكوّن تاريخًا بصريًا للعلامة.
-            </p>
+            <h3 class="lang-ar">التنفيذ والمتابعة</h3>
+            <h3 class="lang-en">Execution & Follow-up</h3>
+            <p class="lang-ar">فريق متخصص يُنفّذ بدقة واهتمام بأدق التفاصيل، مع متابعة مستمرة لضمان رضاك التام عن النتيجة النهائية.</p>
+            <p class="lang-en">A specialized team executes with precision and attention to every detail, with ongoing follow-up to ensure your complete satisfaction with the final result.</p>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- GALLERY -->
+ 
+    <!-- ── GALLERY ── -->
     <section class="section" id="gallery">
-      <div class="container gallery-wrap">
-        <article class="panel">
-          <div class="kicker">Visual Gallery</div>
-          <h2 class="section-title">معرض بديل الرخام والشيبورد</h2>
-          <p class="section-intro" style="margin-bottom: 1.2rem">
-          </p>
-
-          <div class="upload-grid">
-            <div class="upload-slot">
-              <strong>بديل رخام 1</strong>
-              <img
-                src="marble-1.jpg"
-                alt="بديل رخام 1 من Fawz"
-                width="400"
-                height="280"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="upload-slot">
-              <strong>بديل رخام 2</strong>
-              <img
-                src="marble-2.jpg"
-                alt="بديل رخام 2 من Fawz"
-                width="400"
-                height="280"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="upload-slot">
-              <strong>شيبورد 1</strong>
-              <img
-                src="chipboard-1.jpg"
-                alt="شيبورد 1 من Fawz"
-                width="400"
-                height="280"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="upload-slot">
-              <strong>شيبورد 2</strong>
-              <img
-                src="chipboard-2.jpg"
-                alt="شيبورد 2 من Fawz"
-                width="400"
-                height="280"
-                loading="lazy"
-              />
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag lang-ar">معرض الأعمال</div>
+          <div class="section-tag lang-en">Our Work</div>
+          <h2 class="section-title lang-ar">من أعمالنا</h2>
+          <h2 class="section-title lang-en">Portfolio</h2>
+          <div class="gold-divider"></div>
+          <p class="section-sub lang-ar">أعمال حقيقية تعكس جودة تنفيذنا وخبرتنا في الدهانات وبديل الرخام والشيبورد.</p>
+          <p class="section-sub lang-en">Real projects that reflect the quality of our execution and expertise in paints, marble alternatives, and chipboard décor.</p>
+        </div>
+ 
+        <div class="gallery-grid">
+          <div class="gallery-slot">
+            <img src="marble-1.jpg" alt="Marble Alternative 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span class="lang-ar-inline">بديل رخام ١</span>
+              <span class="lang-en-inline">Marble Alternative 1</span>
             </div>
           </div>
-        </article>
-
-        <article class="panel">
-          <div class="kicker">Presentation Quality</div>
-          <h2 class="section-title"> كتالوج الماركات</h2>
-          <p class="section-intro">
-          </p>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-        </article>
+ 
+          <div class="gallery-slot">
+            <img src="marble-2.jpg" alt="Marble Alternative 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span class="lang-ar-inline">بديل رخام ٢</span>
+              <span class="lang-en-inline">Marble Alternative 2</span>
+            </div>
+          </div>
+ 
+          <div class="gallery-slot">
+            <img src="chipboard-1.jpg" alt="Chipboard 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span class="lang-ar-inline">شيبورد ١</span>
+              <span class="lang-en-inline">Chipboard 1</span>
+            </div>
+          </div>
+ 
+          <div class="gallery-slot">
+            <img src="chipboard-2.jpg" alt="Chipboard 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="gallery-placeholder" style="display:none;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <span class="lang-ar-inline">شيبورد ٢</span>
+              <span class="lang-en-inline">Chipboard 2</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- CONTACT -->
+ 
+    <!-- ── CONTACT ── -->
     <section class="section" id="contact">
       <div class="container">
         <div class="contact-card">
-          <div class="contact-text">
-            <div class="kicker">Contact</div>
-            <h2 class="section-title">تواصل مع Fawz</h2>
-            <p class="section-intro" style="margin-bottom: 0.75rem">
-              العنوان المعتمد: حمص - شارع البرازيل - مقابل برج هنادي. تم التركيز هنا على سهولة الوصول
-              والاتصال بدل عرض أوقات عمل، لتبقى الهوية نظيفة وبسيطة.
-            </p>
-            <div class="contact-meta">
-              <span class="pill">الهاتف / واتساب: 0995599603</span>
-              <span class="pill">حمص - شارع البرازيل</span>
-              <span class="pill">مقابل برج هنادي مباشرة</span>
+          <div class="contact-info">
+            <div class="section-tag lang-ar">تواصل معنا</div>
+            <div class="section-tag lang-en">Get In Touch</div>
+            <h2 class="section-title lang-ar">نحن هنا لمساعدتك</h2>
+            <h2 class="section-title lang-en">We're Here to Help</h2>
+            <div class="gold-divider"></div>
+            <p class="section-sub lang-ar">تفضل بزيارتنا أو راسلنا مباشرة — فريقنا جاهز لتقديم الاستشارة المجانية واختيار أفضل الحلول لمشروعك.</p>
+            <p class="section-sub lang-en">Visit us or message us directly — our team is ready to offer a free consultation and find the best solutions for your project.</p>
+            <div class="contact-pills">
+              <span class="contact-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span class="lang-ar-inline">حمص · شارع البرازيل · مقابل برج هنادي</span>
+                <span class="lang-en-inline">Homs · Brazil St · Opposite Hanadie Tower</span>
+              </span>
+              <span class="contact-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 4.18 2 2 0 015.07 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006.99 6.99l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                0995599603
+              </span>
             </div>
           </div>
-
-          <a
-            class="btn btn-primary contact-pill"
-            href="https://wa.me/963995599603"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            راسلنا على واتساب
+ 
+          <a class="btn btn-gold" href="https://wa.me/963995599603" target="_blank" rel="noopener noreferrer" style="min-width: 200px; padding: 1rem 2rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span class="lang-ar-inline">راسلنا على واتساب</span>
+            <span class="lang-en-inline">WhatsApp Us</span>
           </a>
         </div>
       </div>
     </section>
   </main>
-
+ 
   <footer class="footer">
     <div class="container">
-      جميع الحقوق محفوظة لـ Fawz Paints & Decor.
+      <span class="lang-ar">© 2025 Fawz Paints & Decor · حمص، سوريا · جميع الحقوق محفوظة</span>
+      <span class="lang-en">© 2025 Fawz Paints & Decor · Homs, Syria · All Rights Reserved</span>
     </div>
   </footer>
-
+ 
   <script>
     (function () {
-      const btn = document.querySelector("[data-theme-toggle]");
       const root = document.documentElement;
-
-      // تحديد الثيم الابتدائي حسب تفضيل النظام
-      let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-
-      const moon =
-        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      const sun =
-        '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-
-      root.setAttribute("data-theme", theme);
-      if (btn) btn.innerHTML = theme === "dark" ? sun : moon;
-
-      if (btn) {
-        btn.addEventListener("click", () => {
-          theme = theme === "dark" ? "light" : "dark";
-          root.setAttribute("data-theme", theme);
-          btn.innerHTML = theme === "dark" ? sun : moon;
-        });
+ 
+      // ── THEME ──
+      const themeBtn = document.getElementById('themeToggle');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+ 
+      const moonSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+      const sunSVG  = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
+ 
+      function applyTheme(t) {
+        root.setAttribute('data-theme', t);
+        themeBtn.innerHTML = t === 'dark' ? sunSVG : moonSVG;
       }
+ 
+      applyTheme(theme);
+      themeBtn.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; applyTheme(theme); });
+ 
+      // ── LANGUAGE ──
+      const langBtn = document.getElementById('langToggle');
+      let lang = 'ar';
+ 
+      function applyLang(l) {
+        lang = l;
+        root.setAttribute('data-lang', l);
+        root.setAttribute('lang', l);
+        root.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+      }
+ 
+      langBtn.addEventListener('click', () => applyLang(lang === 'ar' ? 'en' : 'ar'));
     })();
   </script>
 </body>
